@@ -3,3 +3,12 @@
 ################################################################################
 
 *.suo
+*.db
+*.opendb
+/.vs
+/WUDESIM.vcxproj.user
+/WUDESIM.vcxproj.filters
+/WUDESIM.vcxproj
+/WUDESIM.sln
+/Debug/WUDESIM.tlog
+/Debug

@@ -94,7 +94,7 @@ int OP_EPANET_INP(Network* net)
 
 		for (int i = 0;i < N_nodes;++i) {
 			istringstream iss(node_data[i]);
-			iss >> net->junctions[i].id >> net->junctions[i].elev >> net->junctions[i].demand;			
+			iss >> net->junctions[i].id >> net->junctions[i].elev >> net->junctions[i].bulkmix >> net->junctions[i].demand;
 		}
 	}
 

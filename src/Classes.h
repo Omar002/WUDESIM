@@ -29,6 +29,7 @@ class all_nodes {
 public:
 	string id;
 	double elev;
+	double bulkmix;
 	double demand;
 };
 
