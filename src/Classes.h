@@ -10,6 +10,13 @@ Date:        10/25/2016
 #include <vector> 
 
 using namespace std;
+class all_coords {
+public:
+	string id;
+	float x;
+	float y;
+	bool exist;
+};
 
 class all_links {
 public:
@@ -21,6 +28,8 @@ public:
 	int node_1_conn;		   //number of pipe connections to node 1
 	int node_2_conn;	       //number of pipe connections to node 2
 
+	all_coords FirstVertex;
+	all_coords LastVertex;
 	//constructor
 	all_links();
 };
@@ -188,6 +197,7 @@ public:
 	const char* WUDESIM_RPT;
 
 	vector<all_links>       pipes;
+	vector<all_coords>		coords;
 	vector<all_nodes>       junctions;
 	vector<string>          demand_sources;
 	vector<string>          quality_sources;

@@ -98,6 +98,16 @@ int OP_EPANET_INP(Network* net)
 		}
 	}
 
+	// Read coordinates data
+	vector<string> coords_data;
+	coords_data = InputData(index, EPANETinp, "[COORDINATES]");
+	int N_coords = coords_data.size();
+	net->coords.resize(N_coords);
+	for (int i = 0; i < N_coords; ++i) {
+		istringstream iss(coords_data[i]);
+		iss >> net->coords[i].id >> net->coords[i].x >> net->coords[i].y;
+	}
+
 	// Read supplemnt junction demands
 	node_data = InputData(index, EPANETinp, "[DEMANDS]");
 	if (node_data.size() != 0) {
