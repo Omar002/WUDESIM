@@ -56,6 +56,17 @@ public:
 	string end;
 };
 
+class all_cross_junctions {
+public:
+	int node_index;
+	bool is_cross_junction;
+	int fast_in_link;
+	int fast_out_link;
+	int slow_in_link;
+	int slow_out_link;
+	float fast_in_conc; // Quality of 'fast' inflow
+	float slow_in_conc; // Quality of 'slow' outflow
+};
 class all_options {
 public:
 	double Rel_Diffusivity;
@@ -199,6 +210,7 @@ public:
 	vector<all_links>       pipes;
 	vector<all_coords>		coords;
 	vector<all_nodes>       junctions;
+	vector<all_cross_junctions> cross_junctions;
 	vector<string>          demand_sources;
 	vector<string>          quality_sources;
 	vector<string>          tanks;
